@@ -1,0 +1,510 @@
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+}
+
+.quickmenu {
+    padding: 15px 18px 25px;
+    overflow: hidden;
+}
+
+.quickmenu ul:after {
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+.quickmenu ul li {
+    width: 65px;
+    margin-right: 16px;
+}
+
+.quickmenu ul li a {
+    position: relative;
+    display: block;
+}
+
+.quickmenu ul li a .quickborder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+}
+
+.quickmenu ul li a img {
+    display: block;
+    width: 70px;
+}
+
+.quickmenu ul li a span {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    width: 70px;
+    padding: 0 10px;
+    display: block;
+    padding-top: 5px;
+    line-height: 18px;
+    font-size: 12px;
+    letter-spacing: -0.8px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.movie-wrap {
+    color: #fff;
+    background-color: #0e0a20;
+    padding-bottom: 40px;
+}
+
+.movie-wrap.bg-use {
+    background: #0e0a20
+        url(https://img.megabox.co.kr/static/mb/images/common/bg/bg-origin.png)
+        no-repeat center top;
+    background-size: 100% 740px;
+}
+
+.movie-wrap p.tit {
+    margin: 18px 18px 30px 18px;
+    font-size: 1.7334em;
+    line-height: 34px;
+    font-weight: 300;
+    min-height: 34px;
+}
+
+.movie-wrap p.tit.small {
+    position: relative;
+    margin: 20px 0 15px 0;
+    font-size: 1em;
+    min-height: 24px;
+    line-height: 22px;
+    font-weight: 300;
+    word-break: break-all;
+    padding-right: 80px;
+}
+
+.movie-wrap p.tit.small .post-write {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.8667em;
+    height: 28px;
+    line-height: 28px;
+    color: #999;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    padding: 0 10px;
+}
+
+.movie-wrap .movie-swipe-wrap {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0 10px 0;
+    height: 450px;
+}
+
+.movie-wrap .btn-scroll-wrap {
+    height: 24px;
+    margin-bottom: 35px;
+    padding-bottom: 0;
+    overflow: hidden;
+    margin-left: 18px;
+}
+
+.movie-wrap .btn-scroll-hidden {
+    height: 41px;
+    overflow: hidden;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.movie-wrap .main-movie-tab {
+    overflow: hidden;
+}
+
+.movie-wrap .list-btn:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.movie-wrap .list-btn .btn {
+    float: none;
+    width: auto;
+    display: inline-block;
+    background: 0 0;
+    border: none;
+    padding: 0;
+    margin-right: 15px;
+}
+
+.movie-wrap .list-btn .btn:first-child {
+    margin-left: 18px;
+}
+
+.movie-wrap .list-btn .btn:last-child {
+    margin-right: 18px;
+}
+
+.movie-wrap .list-btn .btn span {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+}
+
+.movie-wrap .list-btn .btn.act:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 4px;
+    height: 4px;
+    background-color: #ffeb01;
+    border-radius: 2px 2px;
+}
+
+.movie-wrap .list-btn .btn.on span {
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 2px solid #fff;
+}
+
+.movie-swipe-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.movie-swipe-wrap .gofirst {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    margin-top: -20px;
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie-swipe-wrap .gofirst.on {
+    display: block;
+}
+
+.movie-swipe-wrap .gofirst button.btn-gofirst {
+    display: block;
+    width: 30px;
+    height: 40px;
+    border: 0;
+    background: url(https://img.megabox.co.kr/static/mb/images/common/ico/ico-main-left-top.png)
+        center center no-repeat;
+    background-size: 24px;
+}
+/*  */
+
+.movie-swipe-wrap .swiper-wrapper {
+    height: 450px;
+}
+
+.movie-swipe-wrap .swiper-wrapper:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item {
+    overflow: hidden;
+    display: inline-block;
+    width: 210px;
+    vertical-align: top;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 5px;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item:first-child {
+    margin-left: 18px;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item:last-child {
+    margin-right: 30px;
+    width: 100px;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item a {
+    position: relative;
+    width: 100%;
+    display: block;
+    color: #fff;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item a .img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    line-height: 0;
+    font-size: 0;
+    background-color: #24202b;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item a img {
+    width: 210px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item a .rank {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 2em;
+    color: #fff;
+    font-style: italic;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movie-swipe-wrap .swiper-wrapper .item a .badge {
+    position: absolute;
+    top: 260px;
+    right: 10px;
+}
+
+.movie-swipe-wrap .movie-name {
+    text-align: center;
+    font-size: 1.0667em;
+    margin-top: 7px;
+    height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.movie-swipe-wrap .movie-name i {
+    margin-top: -2px;
+}
+
+.movie-swipe-wrap .item.ad-zone .ad-tit {
+    text-align: center;
+    font-size: 1.0667em;
+    margin-top: 7px;
+}
+
+.movie-swipe-wrap .item.ad-zone .ad-txt {
+    font-size: 0.9333em;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item a.circle-more-btn {
+    display: block;
+    padding-top: 100px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item a.circle-more-btn span {
+    display: block;
+    margin: 0 auto 10px;
+    width: 60px;
+    height: 60px;
+    line-height: 58px;
+    text-align: center;
+    border: 1px solid #4a394e;
+    border-radius: 50%;
+}
+
+.movie-swipe-wrap .swiper-wrapper .item a.circle-more-btn em {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.screen-type2 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.screen-type2 p.dolby {
+    width: 50px;
+    height: 26px;
+    margin: 0 0 0 8px;
+    padding: 0;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.6)
+        url(/static/mb/images/movie/mov_top_tag_db.png) 50% 50% no-repeat;
+    background-size: 39px 18px;
+}
+
+.movie-swipe-wrap2 {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 20px 0 0 0;
+    height: 470px;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 {
+    height: 470px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item {
+    overflow: hidden;
+    float: left;
+    display: inline-block;
+    width: 210px;
+    vertical-align: top;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 5px;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item:first-child {
+    margin-left: 18px;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item:last-child {
+    margin-right: 30px;
+    width: 100px;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item a {
+    position: relative;
+    width: 100%;
+    display: block;
+    color: #fff;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item a .img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    line-height: 0;
+    font-size: 0;
+    background-color: #24202b;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item a img {
+    width: 210px;
+    height: 300px;
+    border-radius: 5px 5px 0 0;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item a .rank {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 2em;
+    color: #fff;
+    font-style: italic;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item a .badge {
+    position: absolute;
+    top: 260px;
+    right: 10px;
+}
+
+.movie-swipe-wrap2 .movie-name {
+    text-align: center;
+    font-size: 1.0667em;
+    margin-top: 7px;
+    height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.movie-swipe-wrap2 .movie-name i {
+    margin-top: -2px;
+}
+
+.movie-swipe-wrap2 .item.ad-zone .ad-tit {
+    text-align: center;
+    font-size: 1.0667em;
+    margin-top: 7px;
+}
+
+.movie-swipe-wrap2 .item.ad-zone .ad-txt {
+    font-size: 0.9333em;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item a.circle-more-btn {
+    display: block;
+    padding-top: 100px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item a.circle-more-btn span {
+    display: block;
+    margin: 0 auto 10px;
+    width: 60px;
+    height: 60px;
+    line-height: 58px;
+    text-align: center;
+    border: 1px solid #4a394e;
+    border-radius: 50%;
+}
+
+.movie-swipe-wrap2 .swiper-wrapper2 .item a.circle-more-btn em {
+    color: #fff;
+    opacity: 0.5;
+}
