@@ -33,6 +33,7 @@ $(function () {
         slidesPerView: 2.3,
         spaceBetween: 10,
         freeMode: true,
+        autoplay: true,
     });
 
     // curr 현재 //
